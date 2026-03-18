@@ -27,6 +27,17 @@ El servicio de reservas se comunica con el servicio de canchas para verificar si
 ### Reservas
 - POST /api/reservas
 
+## Cambios implementados
+
+Para lograr la comunicación entre microservicios se realizaron los siguientes cambios:
+
+- Se agregó la dependencia de OpenFeign en el archivo pom.xml
+- Se habilitó Feign en el proyecto con la anotación @EnableFeignClients
+- Se creó un cliente Feign para comunicarse con el servicio de canchas
+- Se modificó el servicio de reservas para validar si la cancha existe antes de crear una reserva
+
+
+
 ## Ejemplo de uso
 
 #Buscar cancha
