@@ -1,7 +1,5 @@
 # Microservicios con Spring Cloud Feign
 
-Este proyecto consiste en la comunicación entre dos microservicios utilizando OpenFeign.
-
 ## Microservicios
 
 - Servicio Canchas (puerto 8081)
@@ -11,21 +9,6 @@ Este proyecto consiste en la comunicación entre dos microservicios utilizando O
 
 El servicio de reservas se comunica con el servicio de canchas para verificar si una cancha existe antes de crear una reserva.
 
-## Tecnologías utilizadas
-
-- Java
-- Spring Boot
-- Spring Cloud OpenFeign
-- Maven
-
-## Endpoints principales
-
-### Canchas
-- GET /api/canchas
-- POST /api/canchas
-
-### Reservas
-- POST /api/reservas
 
 ## Cambios implementados
 
@@ -48,11 +31,12 @@ Para lograr la comunicación entre microservicios se realizaron los siguientes c
 Crear una cancha:
 
 ```json
-{
-  "nombre": "Cancha 1",
-  "tipo": "Futbolito",
-  "ubicacion": "Santiago",
-  "precioPorHora": 20000
-}
+    {
+        "canchaId" : 1,
+        "nombreCliente": "Cachupin",
+        "fecha": "2026-04-03",
+        "horaInicio": "12:00",
+        "horaFin": "13:30"
+    }
 
 
